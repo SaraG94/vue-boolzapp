@@ -9,6 +9,10 @@ img{
     width: 100%;
 }
 
+ul{
+    list-style: none;
+}
+
 /****base****/
 body{
     width: 100%;
@@ -29,8 +33,7 @@ body{
     background-color: white;
 }
 
-/***layout container***/
-
+/*****flex*******/
 .row{
     display: flex;
 }
@@ -40,22 +43,18 @@ body{
     min-height: 100%;
 }
 
+.space-b{
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/***layout macro***/
+
 .col.contacts{
     flex-basis: 557px;
     min-height: 960px;
     overflow: hidden;
-}
-
-.my-profile,
-.bar-chat,
-.bar-keyboard{
-    height: 75px;
-    background-color: #EAEAEA;
-}
-
-.bar-chat,
-.bar-keyboard{
-    border-left: 1px solid  #D6D6D6;
 }
 
 .list-contacts,
@@ -70,7 +69,46 @@ body{
     overflow: hidden;
 }
 
+/***********layout component***********/
+.my-profile,
+.bar-chat,
+.bar-keyboard{
+    height: 75px;
+    background-color: #EAEAEA;
+}
+
+.my-profile,
+.bar-chat{
+    padding: 15px;
+    font-size: 22px;
+}
+
+.my-profile ul {
+    width: 100px;
+}
+.my-profile i,
+.bar-chat i {
+    color: #B1B1B1;
+}
+
+.bar-chat,
+.bar-keyboard{
+    border-left: 1px solid  #D6D6D6;
+}
+
+.friend-account p.info{
+    font-size: 18px;
+    color: #969C9E;
+}
+
+/*****debug****/
+
 .debug{
     height: 50px;
     border: 1px solid green;
+}
+
+.debugs{
+    width: 100px;
+    border: 1px solid orange;
 }
