@@ -91,6 +91,7 @@ body{
 .bar-chat ul {
     width: 100px;
 }
+
 .my-profile i,
 .bar-chat i {
     color: #B1B1B1;
@@ -137,6 +138,48 @@ body{
 
 .bar-keyboard .col-1{
     text-align: center;
+}
+
+.add-not{
+    align-items: center;
+    gap:15px;
+    padding: 10px;
+    background-color: #8EDAFC;
+    font-size: 20px;
+}
+
+.add-not__icone{
+    background-color: white;
+    color: #8EDAFC;
+    /* width: 20px; */
+    font-size: 20px;
+    padding: 7px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.add-not a{
+    color:#5F818C;
+}
+
+.search-bar{
+    padding: 10px;
+    background-color: #FAFAFA;
+}
+
+.search__input{
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    padding: 5px;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.search__input>input{
+    width: 100%;
+    border: none;
+    font-size: 15px;
 }
 
 /*****debug****/
