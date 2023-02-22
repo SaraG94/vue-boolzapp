@@ -48,11 +48,6 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-
-.col-1{
-    flex-basis: calc(100% /12);
-}
-
 /***layout macro***/
 
 .col.contacts{
@@ -73,6 +68,10 @@ body{
     overflow: hidden;
 }
 
+.col-1{
+    flex-basis: calc(100% /12);
+}
+
 /***********layout component***********/
 .my-profile,
 .bar-chat,
@@ -89,6 +88,14 @@ body{
 
 .my-profile .my-account{
     align-items: center;
+}
+
+.img-accounts{
+    width: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
 }
 
 .my-profile ul,
@@ -117,38 +124,7 @@ span.hours{
     color: #969C9E;
 }
 
-.persolan-chat{
-    background-image: url(https://wallpapercave.com/wp/wp10889573.jpg);
-    background-size: contain;
-    background-repeat: repeat;
-}
-
-.bar-keyboard{
-    padding: 10px;
-}
-
-.bar-keyboard>.row{
-    align-items: center;
-    height: 100%;
-    font-size: 20px;
-    color: #6B7376;
-}
-
-.bar-keyboard .col.write{
-    flex-grow: 1;
-}
-
-.col.write>input{
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-}
-
-.bar-keyboard .col-1{
-    text-align: center;
-}
+/*********col contacts**********/
 
 .add-not{
     align-items: center;
@@ -161,7 +137,6 @@ span.hours{
 .add-not__icone{
     background-color: white;
     color: #8EDAFC;
-    /* width: 20px; */
     font-size: 20px;
     padding: 7px;
     aspect-ratio: 1;
@@ -172,6 +147,7 @@ span.hours{
     color:#5F818C;
 }
 
+/***style search-bar***/
 .search-bar{
     padding: 10px;
     background-color: #FAFAFA;
@@ -192,6 +168,7 @@ span.hours{
     font-size: 15px;
 }
 
+/***style list-contacts***/
 .my-contact{
     justify-content: space-between;
     padding: 10px;
@@ -203,14 +180,58 @@ span.hours{
     align-items: center;
 }
 
-.img-accounts{
-    width: 60px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 100%;
-}
-
 .my-contact{
     border-bottom: 2px solid #eeeeee;
+}
+
+/*******col chat**********/
+.persolan-chat{
+    background-image: url(https://wallpapercave.com/wp/wp10889573.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.bar-keyboard{
+    padding: 10px;
+}
+
+.bar-keyboard>.row{
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: #6B7376;
+}
+
+.bar-keyboard .col-1{
+    text-align: center;
+}
+
+.bar-keyboard .col.write{
+    flex-grow: 1;
+}
+
+.col.write>input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.green{
+    background-color: #D5F9BA;
+}
+
+.white{
+    background-color: white;
+    align-self: flex-start;
+}
+
+.msg{
+    width: 330px;
+    margin: 5px 0;
+    border-radius: 10px;
+    padding: 20px 17px;
 }
