@@ -24,6 +24,7 @@ body{
       #009688 100%
     );
     overflow: hidden;
+    font-size: 20px;
 }
 
 .container{
@@ -51,7 +52,6 @@ body{
 .col-1{
     flex-basis: calc(100% /12);
 }
-
 
 /***layout macro***/
 
@@ -87,6 +87,10 @@ body{
     font-size: 22px;
 }
 
+.my-profile .my-account{
+    align-items: center;
+}
+
 .my-profile ul,
 .bar-chat ul {
     width: 100px;
@@ -102,7 +106,13 @@ body{
     border-left: 1px solid  #D6D6D6;
 }
 
-.friend-account p.info{
+.bar-chat .friend-account{
+    gap:10px;
+    align-items: center;
+}
+
+p.info,
+span.hours{
     font-size: 18px;
     color: #969C9E;
 }
@@ -182,14 +192,25 @@ body{
     font-size: 15px;
 }
 
-/*****debug****/
-
-.debug{
-    height: 50px;
-    border: 1px solid green;
+.my-contact{
+    justify-content: space-between;
+    padding: 10px;
+    line-height: 28px;
 }
 
-.debugs{
-    width: 100px;
-    border: 1px solid orange;
+.my-contact .card{
+    gap:20px;
+    align-items: center;
+}
+
+.img-accounts{
+    width: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+.my-contact{
+    border-bottom: 2px solid #eeeeee;
 }
