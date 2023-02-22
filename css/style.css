@@ -83,7 +83,8 @@ body{
     font-size: 22px;
 }
 
-.my-profile ul {
+.my-profile ul,
+.bar-chat ul {
     width: 100px;
 }
 .my-profile i,
