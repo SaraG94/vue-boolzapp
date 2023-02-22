@@ -9,186 +9,199 @@
     <title>Boolzapp</title>
 </head>
 <body>
+    <!--vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
    
-    <div class="container">
-        <div class="row">
-            <div class="col contacts">
-
-                <div class="row row-column">
-                    <div class="col my-profile row space-b">
-                        <figure class="my-account row">
-                            <img class="img-accounts" src="./img/img-lulu.jpg" alt="lulu">
-                            <figcaption>Sara</figcaption>
-                        </figure>
-
-                        <ul class="my-options row space-b">
-                            <li>
-                                <i class="fa-solid fa-circle-notch"></i>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-message"></i>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col add-not row">
-                        <div class="add-not__icone">
-                            <i class="fa-solid fa-bell-slash"></i>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <!--colonna con contatti-->
+                <div class="col contacts">
+    
+                    <div class="row row-column">
+                        <!--profilo personale-->
+                        <div class="col my-profile row space-b">
+                            <figure class="my-account row">
+                                <img class="img-accounts" src="./img/img-lulu.jpg" alt="lulu">
+                                <figcaption>Sara</figcaption>
+                            </figure>
+    
+                            <ul class="my-options row space-b">
+                                <li>
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-message"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </li>
+                            </ul>
                         </div>
-                        
-                        <div>
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <a href="#">Attiva notifiche desktop</a>
+                        <!--notifiche-->
+                        <div class="col add-not row">
+                            <div class="add-not__icone">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col search-bar">
-
-                        <div class="search__input row "> 
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <!--cerca-->
+                        <div class="col search-bar">
+    
+                            <div class="search__input row "> 
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                           
                         </div>
-                       
-                    </div>
-                    <div class="col list-contacts">
-                        <ul class="contacts">
-                            <li class="my-contact row">
-
-                                <div class="card row ">
-                                    <img class="img-accounts" src="./img/doctor.jpg" alt="doct">
-        
-                                    <div class="descrition ">
-                                        <span class="name">Doctor</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                          
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-
-                            <li class="my-contact row">
-                                <div class="card row">
-                                    <img class="img-accounts" src="./img/img-zyra.png" alt="zyra">
-
-                                    <div class="descrition">
-                                        <span class="name">Zyra</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                                
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-
-                            <li class="my-contact row">
-                                <div class="card row">
-                                    <img class="img-accounts" src="./img/rick.png" alt="poro">
-
-                                    <div class="descrition">
-                                        <span class="name">Rick</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                                
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-
-                            <li class="my-contact row">
-                                <div class="card row">
-                                    <img class="img-accounts" src="./img/img-poro.png" alt="poro">
-
-                                    <div class="descrition">
-                                        <span class="name">Canoppo</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                                
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-
-                            <li class="my-contact row">
-                                <div class="card row">
-                                    <img class="img-accounts" src="./img/morty.jpg" alt="Morty">
-
-                                    <div class="descrition">
-                                        <span class="name">Morty</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                                
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-
-                            <li class="my-contact row">
-                                <div class="card row">
-                                    <img class="img-accounts" src="./img/minion.webp" alt="minion">
-
-                                    <div class="descrition">
-                                        <span class="name">Winion</span>
-                                        <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                    </div>
-                                </div>                                
-
-                                <span class="hours">12:00</span>
-
-                            </li>
-                        </ul>
+                        <!--contatti-->
+                        <div class="col list-contacts">
+                            <ul class="contacts">
+                                <li class="my-contact row">
+    
+                                    <div class="card row ">
+                                        <img class="img-accounts" src="./img/doctor.jpg" alt="doct">
+            
+                                        <div class="descrition ">
+                                            <span class="name">Doctor</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                          
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+    
+                                <li class="my-contact row">
+                                    <div class="card row">
+                                        <img class="img-accounts" src="./img/img-zyra.png" alt="zyra">
+    
+                                        <div class="descrition">
+                                            <span class="name">Zyra</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                                
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+    
+                                <li class="my-contact row">
+                                    <div class="card row">
+                                        <img class="img-accounts" src="./img/rick.png" alt="poro">
+    
+                                        <div class="descrition">
+                                            <span class="name">Rick</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                                
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+    
+                                <li class="my-contact row">
+                                    <div class="card row">
+                                        <img class="img-accounts" src="./img/img-poro.png" alt="poro">
+    
+                                        <div class="descrition">
+                                            <span class="name">Canoppo</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                                
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+    
+                                <li class="my-contact row">
+                                    <div class="card row">
+                                        <img class="img-accounts" src="./img/morty.jpg" alt="Morty">
+    
+                                        <div class="descrition">
+                                            <span class="name">Morty</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                                
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+    
+                                <li class="my-contact row">
+                                    <div class="card row">
+                                        <img class="img-accounts" src="./img/minion.webp" alt="minion">
+    
+                                        <div class="descrition">
+                                            <span class="name">Winion</span>
+                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                        </div>
+                                    </div>                                
+    
+                                    <span class="hours">12:00</span>
+    
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col chat">
-                <div class="row row-column">
-                    <div class="col bar-chat row space-b">
-
-                        <div class="card row friend-account">
-                            <img class="img-accounts" src="./img/doctor.jpg" alt="doct">
-
-                            <div class="descrition ">
-                                <span class="name">Doctor</span>
-                                <p class="info">Ultimo accesso oggi alle 15:00</p>
-                            </div>
-                        </div>  
-
-                        <ul class="chat-options row space-b">
-                            <li>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-paperclip"></i>
-
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col persolan-chat row row-column">
-                        <div class="green msg">
-                            <p>Dottore</p>
+                
+                <!--parte chat-->
+                <div class="col chat">
+                    <div class="row row-column">
+                        <!--profilo contatto chat-->
+                        <div class="col bar-chat row space-b">
+    
+                            <div class="card row friend-account">
+                                <img class="img-accounts" src="./img/doctor.jpg" alt="doct">
+    
+                                <div class="descrition ">
+                                    <span class="name">Doctor</span>
+                                    <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                </div>
+                            </div>  
+    
+                            <ul class="chat-options row space-b">
+                                <li>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-paperclip"></i>
+    
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="green msg">
-                            <p>Qui serve il tuo aiuto!</p>
-                        </div>
-                        <div class="white msg">
-                           <p>Allons y Alonso!</p> 
-                        </div>
-                    </div>
-                    <div class="col bar-keyboard">
-                        <div class="row">
-                            <div class="col-1 emoticon">
-                                <i class="fa-regular fa-face-smile"></i>
+                        <!-- chat-->
+                        <div class="col persolan-chat row row-column">
+                            <div class="green msg">   <!--msg inviato-->
+                                <p>Dottore</p>
                             </div>
-                            <div class="col write">
-                                <input type="text" placeholder="Scrivi un messaggio">
+                            <div class="green msg">
+                                <p>Qui serve il tuo aiuto!</p>
                             </div>
-                            <div class="col-1 microphone" >
-                                <i class="fa-solid fa-microphone"></i>
+                            <div class="white msg">    <!--msg ricevuto-->
+                               <p>Allons y Alonso!</p> 
+                            </div>
+                        </div>
+                        <!--barra per creare msg-->
+                        <div class="col bar-keyboard">
+                            <div class="row">
+                                <div class="col-1 emoticon">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </div>
+                                <div class="col write">
+                                    <input type="text" placeholder="Scrivi un messaggio">
+                                </div>
+                                <div class="col-1 microphone" >
+                                    <i class="fa-solid fa-microphone"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,6 +209,8 @@
             </div>
         </div>
     </div>
+
+    <!--vue js-->
     <script src="./js/app.js"></script>
 </body>
 </html>
