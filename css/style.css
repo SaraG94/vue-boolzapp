@@ -48,6 +48,10 @@ body{
     justify-content: space-between;
 }
 
+.col-1{
+    flex-basis: calc(100% /12);
+}
+
 
 /***layout macro***/
 
@@ -100,6 +104,39 @@ body{
 .friend-account p.info{
     font-size: 18px;
     color: #969C9E;
+}
+
+.persolan-chat{
+    background-image: url(https://wallpapercave.com/wp/wp10889573.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.bar-keyboard{
+    padding: 10px;
+}
+
+.bar-keyboard>.row{
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: #6B7376;
+}
+
+.bar-keyboard .col.write{
+    flex-grow: 1;
+}
+
+.col.write>input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.bar-keyboard .col-1{
+    text-align: center;
 }
 
 /*****debug****/
