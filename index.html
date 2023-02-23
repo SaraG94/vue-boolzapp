@@ -90,13 +90,12 @@
                         <!--profilo contatto chat-->
                         <div class="col bar-chat row space-b">
     
-                            <div class="card row friend-account"
-                                v-for="cardFriend in contacts[currentContact]"
-                                >
-                                <img class="img-accounts" :src="cardFriend.name" alt="doct">
+                            <div class="card row friend-account">
+                            
+                                <img class="img-accounts" :src="contacts[currentContact].avatar" alt="doct">
     
                                 <div class="descrition ">
-                                    <span class="name">{{cardFriend.name}}</span>
+                                    <span class="name">{{contacts[currentContact].name}}</span>
                                     <p class="info">Ultimo accesso oggi alle 15:00</p>
                                 </div>
                             </div>  

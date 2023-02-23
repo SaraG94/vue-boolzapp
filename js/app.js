@@ -62,7 +62,7 @@ const contacts = [
             },
             {
             date: '10/01/2020 16:15:22',
-            message: 'Sul bancone di lavoro! Mi sono trasformato in un cetriolo!',
+            message: 'Sul bancone da lavoro! Mi sono trasformato in un cetriolo!',
             status: 'received'
             }
         ],
