@@ -210,7 +210,18 @@ span.hours{
 }
 
 .msg{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
     max-width: 330px;
     border-radius: 10px;
     padding: 20px 17px;
+    
+}
+
+.time{
+    font-size: 15px;
+    align-self: flex-end;
+    color: #969C9E;
 }

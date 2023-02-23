@@ -121,6 +121,10 @@
                                 :class="(textMsg.status === status)? 'white':'green'"
                                 >
                                 <p>{{textMsg.message}}</p>
+                                <p class="time">
+                                   
+                                    {{textMsg.date}}
+                                </p>
                             </div>
                            
                         </div>
@@ -131,7 +135,10 @@
                                     <i class="fa-regular fa-face-smile"></i>
                                 </div>
                                 <div class="col write">
-                                    <input type="text" placeholder="Scrivi un messaggio">
+                                    <input type="text" placeholder="Scrivi un messaggio"
+                                    v-model="inputValue"
+                                    @keyup.enter="addMsg"
+                                    >
                                 </div>
                                 <div class="col-1 microphone" >
                                     <i class="fa-solid fa-microphone"></i>

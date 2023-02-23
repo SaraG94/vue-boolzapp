@@ -136,6 +136,7 @@ createApp({
             contacts :contacts,
             currentContact: 0,
             status: 'received',
+            inputValue: '',
         }
     },
     methods:{
@@ -145,7 +146,28 @@ createApp({
             console.log(this.currentContact)
             console.log('chat')
             console.log(indexContact)
+        },
+
+        addMsg(){
+            const newMsg = this.inputValue.trim()
+            const msg = { message:newMsg, status: 'sent' }
+
+            if(newMsg === ''){
+                return
+            }
+
+            this.contacts[this.currentContact].messages.push(msg)
+			this.inputValue = ''
+
         }
 
+        // hours(){
+        //     const time = this.date;
+        //     console.log(time)
+        //     // const hourMinute = time.split(' ');
+        //     // console.log(hourMinute[1])
+        //     // const correctTime = hourMinute.substring(0, 5);
+        //     // console.log(correctTime);
+        // }
     }
 }).mount('#app')
