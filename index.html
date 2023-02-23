@@ -61,88 +61,19 @@
                         <!--contatti-->
                         <div class="col list-contacts">
                             <ul class="contacts">
-                                <li class="my-contact row">
+                                <li class="my-contact row"
+                                    v-for="contact in contacts">
     
                                     <div class="card row ">
-                                        <img class="img-accounts" src="./img/doctor.jpg" alt="doct">
+                                        <img class="img-accounts" :src="contact.avatar" alt="doct">
             
                                         <div class="descrition ">
-                                            <span class="name">Doctor</span>
+                                            <span class="name">{{contact.name}}</span>
                                             <p class="info">Ultimo accesso oggi alle 15:00</p>
                                         </div>
                                     </div>                          
     
-                                    <span class="hours">12:00</span>
-    
-                                </li>
-    
-                                <li class="my-contact row">
-                                    <div class="card row">
-                                        <img class="img-accounts" src="./img/img-zyra.png" alt="zyra">
-    
-                                        <div class="descrition">
-                                            <span class="name">Zyra</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                                
-    
-                                    <span class="hours">12:00</span>
-    
-                                </li>
-    
-                                <li class="my-contact row">
-                                    <div class="card row">
-                                        <img class="img-accounts" src="./img/rick.png" alt="poro">
-    
-                                        <div class="descrition">
-                                            <span class="name">Rick</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                                
-    
-                                    <span class="hours">12:00</span>
-    
-                                </li>
-    
-                                <li class="my-contact row">
-                                    <div class="card row">
-                                        <img class="img-accounts" src="./img/img-poro.png" alt="poro">
-    
-                                        <div class="descrition">
-                                            <span class="name">Canoppo</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                                
-    
-                                    <span class="hours">12:00</span>
-    
-                                </li>
-    
-                                <li class="my-contact row">
-                                    <div class="card row">
-                                        <img class="img-accounts" src="./img/morty.jpg" alt="Morty">
-    
-                                        <div class="descrition">
-                                            <span class="name">Morty</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                                
-    
-                                    <span class="hours">12:00</span>
-    
-                                </li>
-    
-                                <li class="my-contact row">
-                                    <div class="card row">
-                                        <img class="img-accounts" src="./img/minion.webp" alt="minion">
-    
-                                        <div class="descrition">
-                                            <span class="name">Winion</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                                
-    
-                                    <span class="hours">12:00</span>
+                                    <span class="hours">15:00</span>
     
                                 </li>
                             </ul>
