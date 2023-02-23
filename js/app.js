@@ -139,10 +139,13 @@ createApp({
         }
     },
     methods:{
-        currentChat(currentContact){
+        currentChat(indexContact){
             console.log('chat')
             
-            console.log(currentContact)
+            console.log(indexContact)
+
+            this.currentContact = indexContact 
+            console.log(this.currentContact)
         }
 
     }
