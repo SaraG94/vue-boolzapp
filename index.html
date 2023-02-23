@@ -63,7 +63,8 @@
                         <div class="col list-contacts">
                             <ul class="contacts">
                                 <li class="my-contact row"
-                                    v-for="contact in contacts"
+                                    v-for="(contact,currentContact) in contacts"
+                                    @click="currentChat(currentContact)"
                                     >
     
                                     <div class="card row ">

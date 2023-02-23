@@ -139,6 +139,11 @@ createApp({
         }
     },
     methods:{
+        currentChat(currentContact){
+            console.log('chat')
+            
+            console.log(currentContact)
+        }
 
     }
 }).mount('#app')
