@@ -35,17 +35,17 @@ data() {
             messages: [
                 {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
+                message: 'Andiamo a fare danni?',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 15:50:00',
-                message: 'Ricordati di stendere i panni',
-                status: 'sent'
+                message: 'Aspetta che i miei semi attecchiscano.',
+                status: 'received'
                 },
                 {
                 date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
+                message: 'Sono solo fiori innocui ;) ',
                 status: 'received'
                 }
             ],
@@ -57,17 +57,17 @@ data() {
             messages: [
                 {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
+                message: 'Rick?',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 15:50:00',
-                message: 'Ricordati di stendere i panni',
+                message: 'Dove sei?',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
+                message: 'Sul bancone di lavoro! Mi sono trasformato in un cetriolo!',
                 status: 'received'
                 }
             ],
@@ -79,17 +79,12 @@ data() {
             messages: [
                 {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
-                status: 'sent'
-                },
-                {
-                date: '10/01/2020 15:50:00',
-                message: 'Ricordati di stendere i panni',
+                message: 'Hai ancora biscotti?',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
+                message: 'Poro poro poooro',
                 status: 'received'
                 }
             ],
@@ -101,7 +96,7 @@ data() {
             messages: [
                 {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
+                message: 'Ehi! É anadato bene il viaggio con tuo zio?',
                 status: 'sent'
                 },
                 {
@@ -123,17 +118,17 @@ data() {
             messages: [
                 {
                 date: '10/01/2020 15:30:55',
-                message: 'Hai portato a spasso il cane?',
+                message: 'Se noi li teniamo impegati..',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 15:50:00',
-                message: 'Ricordati di stendere i panni',
+                message: 'Prendi il nexsus?',
                 status: 'sent'
                 },
                 {
                 date: '10/01/2020 16:15:22',
-                message: 'Tutto fatto!',
+                message: 'Consideralo fatto!',
                 status: 'received'
                 }
             ],

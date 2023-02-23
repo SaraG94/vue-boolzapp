@@ -48,8 +48,8 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-/***layout macro***/
 
+/***layout macro***/
 .col.contacts{
     flex-basis: 557px;
     min-height: 960px;
@@ -66,6 +66,7 @@ body{
     flex-grow: 1;
     min-height: 960px;    
     overflow: hidden;
+    border-left: 1px solid  #D6D6D6;
 }
 
 .col-1{
@@ -77,17 +78,16 @@ body{
 .bar-chat,
 .bar-keyboard{
     height: 75px;
+    padding: 15px;
+    font-size: 22px;
     background-color: #EAEAEA;
 }
 
-.my-profile,
-.bar-chat{
-    padding: 15px;
-    font-size: 22px;
-}
-
-.my-profile .my-account{
-    align-items: center;
+.search__input>input,
+.col.write>input{
+    width: 100%;
+    border: none;
+    font-size: 15px;
 }
 
 .img-accounts{
@@ -108,14 +108,14 @@ body{
     color: #B1B1B1;
 }
 
-.bar-chat,
-.bar-keyboard{
-    border-left: 1px solid  #D6D6D6;
+.card{
+    gap:20px;
+    align-items: center;
 }
 
-.bar-chat .friend-account{
+.bar-chat .friend-account,
+.my-profile .my-account{
     gap:10px;
-    align-items: center;
 }
 
 p.info,
@@ -125,19 +125,16 @@ span.hours{
 }
 
 /*********col contacts**********/
-
 .add-not{
     align-items: center;
     gap:15px;
     padding: 10px;
     background-color: #8EDAFC;
-    font-size: 20px;
 }
 
 .add-not__icone{
     background-color: white;
     color: #8EDAFC;
-    font-size: 20px;
     padding: 7px;
     aspect-ratio: 1;
     border-radius: 100%;
@@ -162,25 +159,11 @@ span.hours{
     height: 100%;
 }
 
-.search__input>input{
-    width: 100%;
-    border: none;
-    font-size: 15px;
-}
-
 /***style list-contacts***/
 .my-contact{
     justify-content: space-between;
     padding: 10px;
     line-height: 28px;
-}
-
-.my-contact .card{
-    gap:20px;
-    align-items: center;
-}
-
-.my-contact{
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -191,16 +174,12 @@ span.hours{
     background-repeat: repeat;
     align-items: flex-end;
     padding: 50px;
-}
-
-.bar-keyboard{
-    padding: 10px;
+    gap: 10px;
 }
 
 .bar-keyboard>.row{
     align-items: center;
     height: 100%;
-    font-size: 20px;
     color: #6B7376;
 }
 
@@ -213,10 +192,7 @@ span.hours{
 }
 
 .col.write>input{
-    width: 100%;
     padding: 10px;
-    font-size: 15px;
-    border: none;
     border-radius: 10px;
 }
 
@@ -231,7 +207,6 @@ span.hours{
 
 .msg{
     width: 330px;
-    margin: 5px 0;
     border-radius: 10px;
     padding: 20px 17px;
 }
