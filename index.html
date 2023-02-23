@@ -116,7 +116,9 @@
                             <!--msg-->
                             <div class="msg"               
                                 v-for="textMsg in contacts[currentContact].messages"
+                                :class="(textMsg.status === status)? 'white':'green'"
                                 >   
+                                <p>{{textMsg.status}}</p>
                                 <p>{{textMsg.message}}</p>
                             </div>
                            
