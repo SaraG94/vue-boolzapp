@@ -135,7 +135,7 @@ createApp({
         return {
             contacts :contacts,
             currentContact: 0,
-            status: '',
+            status: 'received',
         }
     },
     methods:{
