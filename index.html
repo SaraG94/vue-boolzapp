@@ -63,7 +63,8 @@
                         <div class="col list-contacts">
                             <ul class="contacts">
                                 <li class="my-contact row"
-                                    v-for="contact in contacts">
+                                    v-for="contact in contacts"
+                                    >
     
                                     <div class="card row ">
                                         <img class="img-accounts" :src="contact.avatar" alt="doct">
@@ -112,15 +113,13 @@
                         </div>
                         <!-- chat-->
                         <div class="col persolan-chat row row-column">
-                            <div class="green msg">   <!--msg inviato-->
-                                <p>Dottore</p>
+                            <!--msg-->
+                            <div class="msg"               
+                                v-for="textMsg in contacts[currentContact].messages"
+                                >   
+                                <p>{{textMsg.message}}</p>
                             </div>
-                            <div class="green msg">
-                                <p>Qui serve il tuo aiuto!</p>
-                            </div>
-                            <div class="white msg">    <!--msg ricevuto-->
-                               <p>Allons y Alonso!</p> 
-                            </div>
+                           
                         </div>
                         <!--barra per creare msg-->
                         <div class="col bar-keyboard">
