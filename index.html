@@ -12,143 +12,143 @@
     <!--vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
    
-    <div id="app">
-        <div class="container">
-            <div class="row">
-                <!--colonna con contatti-->
-                <div class="col contacts">
+    <div id="app" class="app">
+        
+        <div class="container row">
+            <!--colonna con contatti-->
+            <div class="col contacts row-column">
+
+                
+                <!--profilo personale-->
+                <div class="col my-profile row space-b">
+                    
+                    <figure class="my-account card row">
+                        <img class="img-accounts" src="./img/img-lulu.jpg" alt="lulu">
+                        <figcaption>Sara</figcaption>
+                    </figure>
+
+                    <ul class="my-options row ">
+                        <li>
+                            <i class="fa-solid fa-circle-notch"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-message"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!--notifiche-->
+                <div class="col add-not row">
+                    <div class="add-not__icone">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    
+                    <div>
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!--cerca-->
+                <div class="col search-bar">
+
+                    <div class="search__input row "> 
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                    
+                </div>
+                <!--contatti-->
+                <div class="col list-contacts">
+                    <ul class="contacts">
+                        <li class="my-contact row"
+                            v-for="(contact,indexContact) in contacts"
+                            @click="currentChat(indexContact)"
+                            >
+
+                            <div class="card row ">
+                                <img class="img-accounts" :src="contact.avatar" alt="doct">
     
-                    <div class="row row-column">
-                        <!--profilo personale-->
-                        <div class="col my-profile row space-b">
-                            
-                            <figure class="my-account card row">
-                                <img class="img-accounts" src="./img/img-lulu.jpg" alt="lulu">
-                                <figcaption>Sara</figcaption>
-                            </figure>
-    
-                            <ul class="my-options row space-b">
-                                <li>
-                                    <i class="fa-solid fa-circle-notch"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-message"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--notifiche-->
-                        <div class="col add-not row">
-                            <div class="add-not__icone">
-                                <i class="fa-solid fa-bell-slash"></i>
-                            </div>
-                            
-                            <div>
-                                <p>Ricevi notifiche di nuovi messaggi</p>
-                                <a href="#">Attiva notifiche desktop</a>
-                            </div>
-                        </div>
-                        <!--cerca-->
-                        <div class="col search-bar">
-    
-                            <div class="search__input row "> 
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
-                            </div>
-                           
-                        </div>
-                        <!--contatti-->
-                        <div class="col list-contacts">
-                            <ul class="contacts">
-                                <li class="my-contact row"
-                                    v-for="(contact,indexContact) in contacts"
-                                    @click="currentChat(indexContact)"
-                                    >
-    
-                                    <div class="card row ">
-                                        <img class="img-accounts" :src="contact.avatar" alt="doct">
+                                <div class="descrition ">
+                                    <span class="name">{{contact.name}}</span>
+                                    <p class="info">Ultimo accesso oggi alle 15:00</p>
+                                </div>
+                            </div>                          
+
+                            <span class="hours">15:00</span>
+
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
             
-                                        <div class="descrition ">
-                                            <span class="name">{{contact.name}}</span>
-                                            <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                        </div>
-                                    </div>                          
-    
-                                    <span class="hours">15:00</span>
-    
-                                </li>
-                            </ul>
+            <!--parte chat-->
+            <div class="col chat row-column">
+                
+                <!--profilo contatto chat-->
+                <div class="col bar-chat row space-b">
+
+                    <div class="card row friend-account">
+                    
+                        <img class="img-accounts" :src="contacts[currentContact].avatar" alt="doct">
+
+                        <div class="descrition ">
+                            <span class="name">{{contacts[currentContact].name}}</span>
+                            <p class="info">Ultimo accesso oggi alle 15:00</p>
+                        </div>
+                    </div>  
+
+                    <ul class="chat-options row">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-paperclip"></i>
+
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!--chat-->
+                 <div class="col persolan-chat row-column"> 
+                    <!--msg-->
+                    <div class="msg"               
+                        v-for="textMsg in contacts[currentContact].messages"
+                        :class="(textMsg.status === status)? 'white':'green'"
+                        >
+                        <p>{{textMsg.message}}</p>
+                        <p class="time">
+                            
+                            {{textMsg.date}}
+                        </p>
+                    </div>
+                    
+                </div>
+                <!--barra per creare msg-->
+                <div class="col bar-keyboard">
+                    <div class="row">
+                        <div class="col-1 emoticon">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="col write">
+                            <input type="text" placeholder="Scrivi un messaggio"
+                            v-model="inputValue"
+                            @keyup.enter="addMsg"
+                            >
+                        </div>
+                        <div class="col-1 microphone" >
+                            <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
                 </div>
                 
-                <!--parte chat-->
-                <div class="col chat">
-                    <div class="row row-column">
-                        <!--profilo contatto chat-->
-                        <div class="col bar-chat row space-b">
-    
-                            <div class="card row friend-account">
-                            
-                                <img class="img-accounts" :src="contacts[currentContact].avatar" alt="doct">
-    
-                                <div class="descrition ">
-                                    <span class="name">{{contacts[currentContact].name}}</span>
-                                    <p class="info">Ultimo accesso oggi alle 15:00</p>
-                                </div>
-                            </div>  
-    
-                            <ul class="chat-options row space-b">
-                                <li>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-paperclip"></i>
-    
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- chat-->
-                        <div class="col persolan-chat row row-column">
-                            <!--msg-->
-                            <div class="msg"               
-                                v-for="textMsg in contacts[currentContact].messages"
-                                :class="(textMsg.status === status)? 'white':'green'"
-                                >
-                                <p>{{textMsg.message}}</p>
-                                <p class="time">
-                                   
-                                    {{textMsg.date}}
-                                </p>
-                            </div>
-                           
-                        </div>
-                        <!--barra per creare msg-->
-                        <div class="col bar-keyboard">
-                            <div class="row">
-                                <div class="col-1 emoticon">
-                                    <i class="fa-regular fa-face-smile"></i>
-                                </div>
-                                <div class="col write">
-                                    <input type="text" placeholder="Scrivi un messaggio"
-                                    v-model="inputValue"
-                                    @keyup.enter="addMsg"
-                                    >
-                                </div>
-                                <div class="col-1 microphone" >
-                                    <i class="fa-solid fa-microphone"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+        
     </div>
 
     <!--vue js-->

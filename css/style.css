@@ -6,7 +6,7 @@
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 ul{
@@ -14,24 +14,36 @@ ul{
 }
 
 /****base****/
-body{
-    width: 100%;
+.app{
     height: 100vh;
-    background: linear-gradient(
-      to top,
-      #D7DBD6 85%,
-      #009688 85%,
-      #009688 100%
-    );
-    overflow: hidden;
-    font-size: 21px;
+	background-image: linear-gradient(
+        to top,
+        #D7DBD6 85%,
+        #009688 85%,
+        #009688 100%
+      );
+	padding: 40px;
+	display: flex;
+    font-size: 15px;
 }
 
 .container{
-    width: 1600px;
-    min-height: 960px;
-    margin: 42px auto;
-    background-color: white;
+    width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: white;
+} 
+
+.col.contacts{
+    width: 350px;
+	flex-shrink: 0;
+    /* overflow: hidden; */
+}
+
+.col.chat{
+    flex-grow: 1;   
+    /* overflow: hidden; */
+    border-left: 1px solid  #D6D6D6;
 }
 
 /*****flex*******/
@@ -39,21 +51,14 @@ body{
     display: flex;
 }
 
-.row-column {
+.row-column{
+    display: flex;
     flex-direction: column;
-    min-height: 100%;
 }
 
 .space-b{
     align-items: center;
     justify-content: space-between;
-}
-
-/***layout macro***/
-.col.contacts{
-    flex-basis: 557px;
-    min-height: 960px;
-    overflow: hidden;
 }
 
 .list-contacts,
@@ -62,44 +67,41 @@ body{
     overflow-y: scroll;
 }
 
-.col.chat{
-    flex-grow: 1;
-    min-height: 960px;    
-    overflow: hidden;
-    border-left: 1px solid  #D6D6D6;
-}
-
 .col-1{
     flex-basis: calc(100% /12);
 }
 
 /***********layout component***********/
+
 .my-profile,
-.bar-chat,
-.bar-keyboard{
-    height: 75px;
-    padding: 15px;
+.bar-keyboard,
+.bar-chat{
+    height: 60px;
+    padding: 10px;
     background-color: #EAEAEA;
+    flex-shrink: 0;
 }
 
 .search__input>input,
 .col.write>input{
     width: 100%;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .img-accounts{
-    width: 60px;
+    display:block;
+    height: 52px;
     aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 100%;
+    /* object-fit: cover;
+    object-position: center; */
+    border-radius: 999px;
 }
 
 .my-profile ul,
 .bar-chat ul {
-    width: 100px;
+	align-items: center;
+	gap: 12px;
 }
 
 .my-profile i,
@@ -119,11 +121,12 @@ body{
 
 p.info,
 span.hours{
-    font-size: 18px;
+    font-size: 12px;
     color: #969C9E;
-}
+} 
 
 /*********col contacts**********/
+
 .add-not{
     align-items: center;
     gap:15px;
@@ -144,6 +147,7 @@ span.hours{
 }
 
 /***style search-bar***/
+
 .search-bar{
     padding: 10px;
     background-color: #FAFAFA;
@@ -161,9 +165,10 @@ span.hours{
 
 /***style list-contacts***/
 .my-contact{
+    gap:24px;
     justify-content: space-between;
-    padding: 10px;
-    line-height: 28px;
+    padding: 6px 5px 6px 20px;
+    line-height: 24px;
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -213,15 +218,16 @@ span.hours{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    min-width: 150px;
-    max-width: 330px;
+    /*min-width: 150px; */
+    /* max-width: 330px; */
+    max-width: 50%;
     border-radius: 10px;
-    padding: 20px 17px;
+    padding: 12px 11px;
     
 }
 
 .time{
-    font-size: 15px;
+    font-size: 11px;
     align-self: flex-end;
     color: #969C9E;
 }
