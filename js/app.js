@@ -178,17 +178,17 @@ createApp({
         },
 
       
-        // setHours(date){
+        setHours(date){
 
-        //     const time = date;
-        //    // console.log(time)
-        //     const hourMinuteSecond = time.split(' ');
-        //    //console.log(hourMinuteSecond[1])
+            const timeDate = date;
+            console.log(timeDate)
+            const hourMinuteSecond = timeDate.split(' ');
+            console.log(hourMinuteSecond[1])
 
-        //     const hourMinute =hourMinuteSecond[1].split(' ');
-        //    // console.log(hourMinute)
+            const hourMinute =hourMinuteSecond[1].split(' ');
+            console.log(hourMinute)
             
-        //     return hourMinuteSecond[1]
-        // }
+            //return hourMinuteSecond[1]
+        }
     }
 }).mount('#app')
