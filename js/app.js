@@ -160,7 +160,7 @@ createApp({
 
         addMsg(){
             const newMsg = this.inputValue.trim()
-            const msg = {message:newMsg, status: 'sent'}
+            const msg = {date:'10/01/2020 16:35:22',message:newMsg, status: 'sent'}
             
             if(newMsg === ''){
                 return
@@ -171,7 +171,7 @@ createApp({
             
 
             setTimeout(()=>{
-                const newMsgRecived = { message:'Certo', status: 'received' }
+                const newMsgRecived = {date:'10/01/2020 16:35:25', message:'Certo', status: 'received' }
                 this.contacts[this.currentContact].messages.push(newMsgRecived);
                 
             },1000)
@@ -181,14 +181,10 @@ createApp({
         setHours(date){
 
             const timeDate = date;
-            console.log(timeDate)
             const hourMinuteSecond = timeDate.split(' ');
-            console.log(hourMinuteSecond[1])
-
-            const hourMinute =hourMinuteSecond[1].split(' ');
-            console.log(hourMinute)
+            //const hourMinute =hourMinuteSecond[1].split(' ');
             
-            //return hourMinuteSecond[1]
+            return hourMinuteSecond[1]
         }
     }
 }).mount('#app')
