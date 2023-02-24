@@ -147,28 +147,36 @@ createApp({
 
         addMsg(){
             const newMsg = this.inputValue.trim()
-            const msg = { message:newMsg, status: 'sent' }
-            //const newMsgRecived = { message:'Certo', status: 'received' }
-
+            const msg = {date:'', message:newMsg, status: 'sent' }
+            
             if(newMsg === ''){
                 return
             }
 
             this.contacts[this.currentContact].messages.push(msg)
 			this.inputValue = ''
+            
+
+            setTimeout(function(){
+                const newMsgRecived = { message:'Certo', status: 'received' }
+                this.contacts[this.currentContact].messages.push(newMsgRecived);
+                
+            },1000)
         },
 
-        setHours(date){
+      
 
-            const time = date;
-            console.log(time)
-            const hourMinuteSecond = time.split(' ');
-            console.log(hourMinuteSecond[1])
+        // setHours(date){
 
-            const hourMinute =hourMinuteSecond[1].split(' ');
-            console.log(hourMinute)
+        //     const time = date;
+        //    // console.log(time)
+        //     const hourMinuteSecond = time.split(' ');
+        //    //console.log(hourMinuteSecond[1])
+
+        //     const hourMinute =hourMinuteSecond[1].split(' ');
+        //    // console.log(hourMinute)
             
-            return hourMinuteSecond[1]
-        }
+        //     return hourMinuteSecond[1]
+        // }
     }
 }).mount('#app')
