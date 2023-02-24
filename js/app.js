@@ -141,16 +141,22 @@ createApp({
         }
     },
     computed: {
-        
-        // publishedSearchContact() {
-        //     const result = (contacts[i].name.length).includes("inputSearchValue")
-        //     console.log(result,contacts[i].name.length,inputSearchValue)
+        filteredName(){
+           
+            // return this.contacts.filter(contact => {
+            //  
+            //     return contact.name.toLowerCase().indexOf(inputSearchValue.toLowerCase()) != -1;
+            // });
 
-        //     if(result === true){
-        //         return this.contacts[this.currentContact]
-        //     }
-             
-        // }
+            const names = this.contacts[this.currentContact].name
+
+            const result = names.includes("inputSearchValue")
+            console.log(result,inputSearchValue)
+
+            if(result === true){
+                return this.contacts[this.currentContact]
+            }
+        }
     },
     methods:{
         setCurrentChat(indexContact){

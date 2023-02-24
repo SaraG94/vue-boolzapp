@@ -58,12 +58,6 @@
                             v-model="inputSearchValue"
                         >
                     </div>
-                    <div class="result"
-                        v-for="contact in contacts.length"
-
-                    >
-                        <!-- {{publishedSearchContact}} -->
-                    </div>
                     
                 </div>
                 <!--contatti-->
@@ -73,7 +67,9 @@
                             v-for="(contact,indexContact) in contacts"
                             :class="(indexContact === currentContact)? 'active':''"
                             @click="setCurrentChat(indexContact)"
-                            >
+                            v-for="contact in filteredName"
+                        >
+                            
 
                             <div class="card row ">
                                 <img class="img-accounts" :src="contact.avatar" alt="doct">
