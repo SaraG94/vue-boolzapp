@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/2cbecd44b4.js" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Boolzapp</title>
 </head>
 <body>
-    <!--vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-   
+
     <div id="app" class="app">
         
         <div class="container row">
@@ -64,7 +63,8 @@
                     <ul class="contacts">
                         <li class="my-contact row"
                             v-for="(contact,indexContact) in contacts"
-                            @click="currentChat(indexContact)"
+                            :class="(indexContact === currentContact)? 'active':''"
+                            @click="setCurrentChat(indexContact)"
                             >
 
                             <div class="card row ">
@@ -123,7 +123,7 @@
                         <p>{{textMsg.message}}</p>
                         <p class="time">
                             
-                            {{textMsg.date}}
+                            {{setHours(textMsg.date)}}
                         </p>
                     </div>
                     

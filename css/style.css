@@ -44,6 +44,7 @@ ul{
     flex-grow: 1;   
     /* overflow: hidden; */
     border-left: 1px solid  #D6D6D6;
+    max-width: 674px;
 }
 
 /*****flex*******/
@@ -172,7 +173,8 @@ span.hours{
     border-bottom: 2px solid #eeeeee;
 }
 
-.my-contact:hover{
+.my-contact:hover,
+.active{
     background-color: #E9EBEB;
 }
 
@@ -218,12 +220,16 @@ span.hours{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /*min-width: 150px; */
+    min-width: 100px;
     /* max-width: 330px; */
     max-width: 50%;
     border-radius: 10px;
     padding: 12px 11px;
     
+}
+
+.msg>p{
+    word-wrap: break-word;
 }
 
 .time{
