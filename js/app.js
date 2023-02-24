@@ -143,19 +143,19 @@ createApp({
     computed: {
         filteredName(){
            
-            // return this.contacts.filter(contact => {
-            //  
-            //     return contact.name.toLowerCase().indexOf(inputSearchValue.toLowerCase()) != -1;
-            // });
+            return this.contacts.filter(contact => {
+             
+                return contact.name.toLowerCase().indexOf(inputSearchValue.toLowerCase()) != -1;
+            });
 
-            const names = this.contacts[this.currentContact].name
+            // const names = this.contacts[this.currentContact].name
 
-            const result = names.includes("inputSearchValue")
-            console.log(result,inputSearchValue)
+            // const result = names.includes("inputSearchValue")
+            // console.log(result,inputSearchValue)
 
-            if(result === true){
-                return this.contacts[this.currentContact]
-            }
+            // if(result === true){
+            //     return this.contacts[this.currentContact]
+            // }
         }
     },
     methods:{
