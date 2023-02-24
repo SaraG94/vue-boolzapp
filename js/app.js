@@ -137,7 +137,20 @@ createApp({
             currentContact: 0,
             status: 'received',
             inputValue: '',
+            inputSearchValue:'',
         }
+    },
+    computed: {
+        
+        // publishedSearchContact() {
+        //     const result = (contacts[i].name.length).includes("inputSearchValue")
+        //     console.log(result,contacts[i].name.length,inputSearchValue)
+
+        //     if(result === true){
+        //         return this.contacts[this.currentContact]
+        //     }
+             
+        // }
     },
     methods:{
         setCurrentChat(indexContact){
@@ -147,7 +160,7 @@ createApp({
 
         addMsg(){
             const newMsg = this.inputValue.trim()
-            const msg = {date:'', message:newMsg, status: 'sent' }
+            const msg = {message:newMsg, status: 'sent'}
             
             if(newMsg === ''){
                 return
@@ -157,7 +170,7 @@ createApp({
 			this.inputValue = ''
             
 
-            setTimeout(function(){
+            setTimeout(()=>{
                 const newMsgRecived = { message:'Certo', status: 'received' }
                 this.contacts[this.currentContact].messages.push(newMsgRecived);
                 
@@ -165,7 +178,6 @@ createApp({
         },
 
       
-
         // setHours(date){
 
         //     const time = date;

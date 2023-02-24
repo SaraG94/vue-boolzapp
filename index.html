@@ -54,7 +54,15 @@
 
                     <div class="search__input row "> 
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat"
+                            v-model="inputSearchValue"
+                        >
+                    </div>
+                    <div class="result"
+                        v-for="contact in contacts.length"
+
+                    >
+                        <!-- {{publishedSearchContact}} -->
                     </div>
                     
                 </div>
