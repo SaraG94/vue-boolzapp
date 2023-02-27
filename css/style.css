@@ -211,8 +211,8 @@ span.hours{
     background-color: #D5F9BA;
 }
 
-.white{
-    background-color: white;
+.white-cream{
+    background-color: rgb(242 238 208);
     align-self: flex-start;
 }
 
@@ -236,4 +236,8 @@ span.hours{
     font-size: 11px;
     align-self: flex-end;
     color: #969C9E;
+}
+
+.hidden{
+    display: none;
 }

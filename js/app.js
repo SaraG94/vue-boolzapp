@@ -140,28 +140,13 @@ createApp({
             inputSearchValue:'',
         }
     },
-    computed: {
-        filteredName(){
-           
-            return this.contacts.filter(contact => {
-             
-                return contact.name.toLowerCase().indexOf(inputSearchValue.toLowerCase()) != -1;
-            });
 
-            // const names = this.contacts[this.currentContact].name
-
-            // const result = names.includes("inputSearchValue")
-            // console.log(result,inputSearchValue)
-
-            // if(result === true){
-            //     return this.contacts[this.currentContact]
-            // }
-        }
-    },
     methods:{
         setCurrentChat(indexContact){
 
             this.currentContact = indexContact 
+            //reset messaggio scritto, e non inviato, ogni volta che cambio chat
+            this.inputValue = ''
         },
 
         addMsg(){
@@ -183,7 +168,6 @@ createApp({
             },1000)
         },
 
-      
         setHours(date){
 
             const timeDate = date;
@@ -191,6 +175,14 @@ createApp({
             //const hourMinute =hourMinuteSecond[1].split(' ');
             
             return hourMinuteSecond[1]
+        },
+
+        isHidden(contact){
+            const name= contact.name.toLowerCase() //destrutturazione const{name} = contact 
+            const search = this.inputSearchValue.trim().toLowerCase()
+            const result = !name.includes(search)
+
+            return result //ritorno i nomi che non includono search
         }
     }
 }).mount('#app')

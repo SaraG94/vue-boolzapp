@@ -65,11 +65,12 @@
                     <ul class="contacts">
                         <li class="my-contact row"
                             v-for="(contact,indexContact) in contacts"
-                            :class="(indexContact === currentContact)? 'active':''"
+                            :class="{
+                                'active':indexContact === currentContact,
+                                'hidden': isHidden(contact)
+                            }"
                             @click="setCurrentChat(indexContact)"
-                            v-for="contact in filteredName"
                         >
-                            
 
                             <div class="card row ">
                                 <img class="img-accounts" :src="contact.avatar" alt="doct">
